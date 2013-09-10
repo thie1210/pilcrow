@@ -2,10 +2,9 @@
     "scope": "text.html - source, punctuation",
 
     "completions": [
-        { "trigger": "&hyphen", "contents": "-" },
-        { "trigger": "&apostrophe", "contents": "’" },
-        { "trigger": "&nonbreaking hyphen", "contents": "&#8209;" },
-        { "trigger": "&optional-hyphen", "contents": "&shy;" },
+        { "trigger": "&hyphen", "contents": "-"},
+
+        { "trigger": "&non-breaking-hyphen", "contents": "&#x2011;"},
 
         // quotation mark (APL quote)
         // &quot;  &#34;  &#x0022;
@@ -86,14 +85,15 @@
         {"trigger": "&not-sign", "contents": "¬"},
         {"trigger": "&angled-dash-in-typography", "contents": "¬"},
 
-        // &shy;   &#173;  &#x00AD;        soft hyphen (discretionary hyphen)
+        // soft hyphen (discretionary hyphen)
+        // &shy;   &#173;  &#x00AD;
         {"trigger": "&soft-hyphen", "contents": "&shy;"},
         {"trigger": "&discretionary-hyphen", "contents": "&shy;"},
         {"trigger": "&optional-hyphen", "contents": "&shy;" },
         
         // registered sign (registered trade mark sign)
         // &reg;  &#174;  &#x00AE;
-        {"trigger": "&registered-trade-mark-sign", "contents": "®"},
+        {"trigger": "&registered-trademark-sign", "contents": "®"},
 
         // macron (spacing macron; overline; APL overbar)
         // &macr;  &#175;  &#x00AF;
@@ -134,7 +134,7 @@
 
         // middle dot (Georgian comma; Greek middle dot)
         // &middot;  &#183;  &#x00B7;
-        {"trigger": "&middle-dot (Georgian comma; Greek middle dot)", "contents": "·"},
+        {"trigger": "&middle-dot", "contents": "·"},
         {"trigger": "&midpoint-in-typography", "contents": "·"},
         {"trigger": "&georgian-comma", "contents": "·"},
         {"trigger": "&greek-middle-dot-ano-teleia", "contents": "·"},
@@ -175,11 +175,11 @@
 
         // Latin capital letter A with grave (Latin capital letter A grave)
         // &Agrave;  &#192;  &#x00C0;
-        {"trigger": "&Latin-capital-letter-a-grave", "contents": "À"},
+        {"trigger": "&latin-capital-letter-a-grave", "contents": "À"},
 
         // Latin capital letter A with acute
         // &Aacute;  &#193;  &#x00C1;
-        {"trigger": "&Latin-capital-letter-a-acute", "contents": "Á"},
+        {"trigger": "&latin-capital-letter-a-acute", "contents": "Á"},
 
         // Latin capital letter A with circumflex
         // &Acirc;  &#194;  &#x00C2;
@@ -199,200 +199,203 @@
 
         // Latin capital letter AE (Latin capital ligature AE)
         // &AElig;  &#198;  &#x00C6;
-        {"trigger": "&Latin-capital-ligature-letter-ae", "contents": "Æ"},
+        {"trigger": "&latin-capital-ligature-letter-ae", "contents": "Æ"},
 
         // Latin capital letter C with cedilla
         // &Ccedil;  &#199;  &#x00C7;
-        {"trigger": "&Latin-capital-letter-c-cedilla", "contents": "Ç"},
+        {"trigger": "&latin-capital-letter-c-cedilla", "contents": "Ç"},
 
         // Latin capital letter E with grave
         // &Egrave;  &#200;  &#x00C8;
-        {"trigger": "&Latin capital letter E grave", "contents": "È"},
+        {"trigger": "&latin-capital-letter-e-grave", "contents": "È"},
 
         // Latin capital letter E with acute
         // &Eacute;  &#201;  &#x00C9;
-        {"trigger": "&Latin capital letter E acute", "contents": "É"},
+        {"trigger": "&latin-capital-letter-e-acute", "contents": "É"},
 
         // Latin capital letter E with circumflex
         // &Ecirc;  &#202;  &#x00CA;
-        {"trigger": "&Latin capital letter E circumflex", "contents": "Ê"},
+        {"trigger": "&latin-capital-letter-e-circumflex", "contents": "Ê"},
 
         // Latin capital letter E with diaeresis
         // &Euml;  &#203;  &#x00CB;
-        {"trigger": "&Latin capital letter E diaeresis", "contents": "Ë"},
+        {"trigger": "&latin-capital-letter-e-diaeresis", "contents": "Ë"},
 
         // Latin capital letter I with grave
         // &Igrave;  &#204;  &#x00CC;
-        {"trigger": "&Latin capital letter I grave", "contents": "Ì"},
+        {"trigger": "&latin-capital-letter-i-grave", "contents": "Ì"},
 
         // Latin capital letter I with acute
         // &Iacute;  &#205;  &#x00CD;
-        {"trigger": "&Latin capital letter I acute", "contents": "Í"},
+        {"trigger": "&latin-capital-letter-i-acute", "contents": "Í"},
 
         // Latin capital letter I with circumflex
         // &Icirc;  &#206;  &#x00CE;
-        {"trigger": "&Latin capital letter I circumflex", "contents": "Î"},
+        {"trigger": "&latin-capital-letter-i-circumflex", "contents": "Î"},
 
         // Latin capital letter I with diaeresis
         // &Iuml;  &#207;  &#x00CF;
-        {"trigger": "&Latin capital letter I diaeresis", "contents": "Ï"},
+        {"trigger": "&latin-capital-letter-i-diaeresis", "contents": "Ï"},
 
         // Latin capital letter ETH
         // &ETH;  &#208;  &#x00D0;
-        {"trigger": "&Latin capital letter ETH", "contents": "Ð"},
+        {"trigger": "&latin-capital-letter-eth", "contents": "Ð"},
 
         // Latin capital letter N with tilde
         // &Ntilde;  &#209;  &#x00D1;
-        {"trigger": "&Latin capital letter N tilde", "contents": "Ñ"},
+        {"trigger": "&latin-capital-letter-n-tilde", "contents": "Ñ"},
 
         // Latin capital letter O with grave
         // &Ograve;  &#210;  &#x00D2;
-        {"trigger": "&Latin capital letter O grave", "contents": "Ò"},
+        {"trigger": "&latin-capital-letter-o-grave", "contents": "Ò"},
 
         // Latin capital letter O with acute
         // &Oacute;  &#211;  &#x00D3;
-        {"trigger": "&Latin capital letter O acute", "contents": "Ó"},
+        {"trigger": "&latin-capital-letter-o-acute", "contents": "Ó"},
 
         // Latin capital letter O circumflex
         // &Ocirc;  &#212;  &#x00D4;
-        {"trigger": "&Latin capital letter O circumflex", "contents": "Ô"},
+        {"trigger": "&latin-capital-letter-o-circumflex", "contents": "Ô"},
 
         // Latin capital letter O with tilde
         // &Otilde;  &#213;  &#x00D5;
-        {"trigger": "&Latin capital letter O tilde", "contents": "Õ"},
+        {"trigger": "&latin-capital-letter-o-tilde", "contents": "Õ"},
 
         // Latin capital letter O with diaeresis
         // &Ouml;  &#214;  &#x00D6;
-        {"trigger": "&Latin capital letter O diaeresis", "contents": "Ö"},
+        {"trigger": "&latin-capital-letter-o-diaeresis", "contents": "Ö"},
 
         // multiplication sign
         // &times;  &#215;  &#x00D7;
+        {"trigger": "&times", "contents": "×"},
         {"trigger": "&multiplication-sign", "contents": "×"},
         {"trigger": "&z-notation-cartesian-product", "contents": "×"},
 
         // Latin capital letter O with stroke (Latin capital letter O slash)
         // &Oslash;  &#216;  &#x00D8;
-        {"trigger": "&Latin capital letter O with stroke (Latin capital letter O slash)", "contents": "Ø"},
+        {"trigger": "&latin-capital-letter-o-with-stroke", "contents": "Ø"},
+        {"trigger": "&latin-capital-letter-o-slash", "contents": "Ø"},
 
         // Latin capital letter U with grave
         // &Ugrave;  &#217;  &#x00D9;
-        {"trigger": "&Latin capital letter U with grave", "contents": "Ù"},
+        {"trigger": "&latin-capital-letter-u-with-grave", "contents": "Ù"},
 
         // Latin capital letter U with acute
         // &Uacute;  &#218;  &#x00DA;
-        {"trigger": "&Latin capital letter U with acute", "contents": "Ú"},
+        {"trigger": "&latin-capital-letter-u-with-acute", "contents": "Ú"},
 
         // Latin capital letter U with circumflex
         // &Ucirc;  &#219;  &#x00DB;
-        {"trigger": "&Latin capital letter U with circumflex", "contents": "Û"},
+        {"trigger": "&latin-capital-letter-u-with-circumflex", "contents": "Û"},
 
         // Latin capital letter U with diaeresis
         // &Uuml;  &#220;  &#x00DC;
-        {"trigger": "&Latin capital letter U with diaeresis", "contents": "Ü"},
+        {"trigger": "&latin-capital-letter-u-with-diaeresis", "contents": "Ü"},
 
         // Latin capital letter Y with acute
         // &Yacute;  &#221;  &#x00DD;
-        {"trigger": "&Latin capital letter Y with acute", "contents": "Ý"},
+        {"trigger": "&latin-capital-letter-y-with-acute", "contents": "Ý"},
 
         // Latin capital letter THORN
         // &THORN;  &#222;  &#x00DE;
-        {"trigger": "&Latin capital letter THORN", "contents": "Þ"},
+        {"trigger": "&latin-capital-letter-thorn", "contents": "Þ"},
 
         // Latin small letter sharp s (ess-zed)
         // &szlig;  &#223;  &#x00DF;
-        {"trigger": "&Latin small letter sharp s (ess-zed)", "contents": "ß"},
+        {"trigger": "&latin-small-letter-sharp-s-ess-zed", "contents": "ß"},
 
         // Latin small letter a with grave
         // &agrave;  &#224;  &#x00E0;
-        {"trigger": "&Latin small letter a with grave", "contents": "à"},
+        {"trigger": "&latin-small-letter-a-with-grave", "contents": "à"},
 
         // Latin small letter a with acute
         // &aacute;  &#225;  &#x00E1;
-        {"trigger": "&Latin small letter a with acute", "contents": "á"},
+        {"trigger": "&latin-small-letter-a-with-acute", "contents": "á"},
 
         // Latin small letter a with circumflex
         // &acirc;  &#226;  &#x00E2;
-        {"trigger": "&Latin small letter a with circumflex", "contents": "â"},
+        {"trigger": "&latin-small-letter-a-with-circumflex", "contents": "â"},
 
         // Latin small letter a with tilde
         // &atilde;  &#227;  &#x00E3;
-        {"trigger": "&Latin small letter a with tilde", "contents": "ã"},
+        {"trigger": "&latin-small-letter-a-with-tilde", "contents": "ã"},
 
         // Latin small letter a with diaeresis
         // &auml;  &#228;  &#x00E4;
-        {"trigger": "&Latin small letter a with diaeresis", "contents": "ä"},
+        {"trigger": "&latin-small-letter-a-with-diaeresis", "contents": "ä"},
 
         // Latin small letter a with ring above
         // &aring;  &#229;  &#x00E5;
-        {"trigger": "&Latin small letter a with ring above", "contents": "å"},
+        {"trigger": "&latin-small-letter-a-with-ring-above", "contents": "å"},
 
         // Latin small letter ae (Latin small ligature ae)
         // &aelig;  &#230;  &#x00E6;
-        {"trigger": "&Latin small letter ae (Latin small ligature ae)", "contents": "æ"},
+        {"trigger": "&latin-small-letter-ae", "contents": "æ"},
+        {"trigger": "&latin-small-ligature-ae", "contents": "æ"},
 
         // Latin small letter c with cedilla
         // &ccedil;  &#231;  &#x00E7;
-        {"trigger": "&Latin small letter c with cedilla", "contents": "ç"},
+        {"trigger": "&latin-small-letter-c-with-cedilla", "contents": "ç"},
 
         // Latin small letter e with grave
         // &egrave;  &#232;  &#x00E8;
-        {"trigger": "&Latin small letter e with grave", "contents": "è"},
+        {"trigger": "&latin-small-letter-e-with-grave", "contents": "è"},
 
         // Latin small letter e with acute
         // &eacute;  &#233;  &#x00E9;
-        {"trigger": "&Latin small letter e with acute", "contents": "é"},
+        {"trigger": "&latin-small-letter-e-with-acute", "contents": "é"},
 
         // Latin small letter e with circumflex
         // &ecirc;  &#234;  &#x00EA;
-        {"trigger": "&Latin small letter e with circumflex", "contents": "ê"},
+        {"trigger": "&latin-small-letter-e-with-circumflex", "contents": "ê"},
 
         // Latin small letter e with diaeresis
         // &euml;  &#235;  &#x00EB;
-        {"trigger": "&Latin small letter e with diaeresis", "contents": "ë"},
+        {"trigger": "&latin-small-letter-e-with-diaeresis", "contents": "ë"},
 
         // Latin small letter i with grave
         // &igrave;  &#236;  &#x00EC;
-        {"trigger": "&Latin small letter i with grave", "contents": "ì"},
+        {"trigger": "&latin-small-letter-i-with-grave", "contents": "ì"},
 
         // Latin small letter i with acute
         // &iacute;  &#237;  &#x00ED;
-        {"trigger": "&Latin small letter i with acute", "contents": "í"},
+        {"trigger": "&latin-small-letter-i-with-acute", "contents": "í"},
 
         // Latin small letter i with circumflex
         // &icirc;  &#238;  &#x00EE;
-        {"trigger": "&Latin small letter i with circumflex", "contents": "î"},
+        {"trigger": "&latin-small-letter-i-with-circumflex", "contents": "î"},
 
         // Latin small letter i with diaeresis
         // &iuml;  &#239;  &#x00EF;
-        {"trigger": "&Latin small letter i with diaeresis", "contents": "ï"},
+        {"trigger": "&latin-small-letter-i-with-diaeresis", "contents": "ï"},
 
         // Latin small letter eth
         // &eth;  &#240;  &#x00F0;
-        {"trigger": "&Latin small letter eth", "contents": "ð"},
+        {"trigger": "&latin-small-letter-eth", "contents": "ð"},
 
         // Latin small letter n with tilde
         // &ntilde;  &#241;  &#x00F1;
-        {"trigger": "&Latin small letter n with tilde", "contents": "ñ"},
+        {"trigger": "&latin-small-letter-n-with-tilde", "contents": "ñ"},
 
         // Latin small letter o with grave
         // &ograve;  &#242;  &#x00F2;
-        {"trigger": "&Latin small letter o with grave", "contents": "ò"},
+        {"trigger": "&latin-small-letter-o-with-grave", "contents": "ò"},
 
         // Latin small letter o with acute
         // &oacute;  &#243;  &#x00F3;
-        {"trigger": "&Latin small letter o with acute", "contents": "ó"},
+        {"trigger": "&latin-small-letter-o-with-acute", "contents": "ó"},
 
         // Latin small letter o with circumflex
         // &ocirc;  &#244;  &#x00F4;
-        {"trigger": "&Latin small letter o with circumflex", "contents": "ô"},
+        {"trigger": "&latin-small-letter-o-with-circumflex", "contents": "ô"},
 
         // Latin small letter o with tilde
         // &otilde;  &#245;  &#x00F5;
-        {"trigger": "&Latin small letter o with tilde", "contents": "õ"},
+        {"trigger": "&latin-small-letter-o-with-tilde", "contents": "õ"},
 
         // Latin small letter o with diaeresis
         // &ouml;  &#246;  &#x00F6;
-        {"trigger": "&Latin small letter o with diaeresis", "contents": "ö"},
+        {"trigger": "&latin-small-letter-o-with-diaeresis", "contents": "ö"},
 
         // division sign
         // &divide;  &#247;  &#x00F7;
@@ -400,59 +403,62 @@
 
         // Latin small letter o with stroke (Latin small letter o slash)
         // &oslash;  &#248;  &#x00F8;
-        {"trigger": "&Latin small letter o with stroke (Latin small letter o slash)", "contents": "ø"},
+        {"trigger": "&latin-small-letter-o-with-stroke", "contents": "ø"},
+        {"trigger": "&latin-small-letter-o-slash", "contents": "ø"},
 
         // Latin small letter u with grave
         // &ugrave;  &#249;  &#x00F9;
-        {"trigger": "&Latin small letter u with grave", "contents": "ù"},
+        {"trigger": "&latin-small-letter-u-with-grave", "contents": "ù"},
 
         // Latin small letter u with acute
         // &uacute;  &#250;  &#x00FA;
-        {"trigger": "&Latin small letter u with acute", "contents": "ú"},
+        {"trigger": "&latin-small-letter-u-with-acute", "contents": "ú"},
 
         // Latin small letter u with circumflex
         // &ucirc;  &#251;  &#x00FB;
-        {"trigger": "&Latin small letter u with circumflex", "contents": "û"},
+        {"trigger": "&latin-small-letter-u-with-circumflex", "contents": "û"},
 
         // Latin small letter u with diaeresis
         // &uuml;  &#252;  &#x00FC;
-        {"trigger": "&Latin small letter u with diaeresis", "contents": "ü"},
+        {"trigger": "&latin-small-letter-u-with-diaeresis", "contents": "ü"},
 
         // Latin small letter y with acute
         // &yacute;  &#253;  &#x00FD;
-        {"trigger": "&Latin small letter y with acute", "contents": "ý"},
+        {"trigger": "&latin-small-letter-y-with-acute", "contents": "ý"},
 
         // Latin small letter thorn
         // &thorn;  &#254;  &#x00FE;
-        {"trigger": "&Latin small letter thorn", "contents": "þ"},
+        {"trigger": "&latin-small-letter-thorn", "contents": "þ"},
 
         // Latin small letter y with diaeresis
         // &yuml;  &#255;  &#x00FF;
-        {"trigger": "&Latin small letter y with diaeresis", "contents": "ÿ"},
+        {"trigger": "&latin-small-letter-y-with-diaeresis", "contents": "ÿ"},
 
         // Latin capital ligature oe
         // &OElig;  &#338;  &#x0152;
-        {"trigger": "&Latin capital ligature oe", "contents": "Œ"},
+        {"trigger": "&latin-capital-ligature-oe", "contents": "Œ"},
 
         // Latin small ligature oe
         // &oelig;  &#339;  &#x0153;
-        {"trigger": "&Latin small ligature oe", "contents": "œ"},
+        {"trigger": "&latin-small-ligature-oe", "contents": "œ"},
 
         // Latin capital letter s with caron
         // &Scaron;  &#352;  &#x0160;
-        {"trigger": "&Latin capital letter s with caron", "contents": "Š"},
+        {"trigger": "&latin-capital-letter-s-with-caron", "contents": "Š"},
 
         // Latin small letter s with caron
         // &scaron;  &#353;  &#x0161;
-        {"trigger": "&Latin small letter s with caron", "contents": "š"},
+        {"trigger": "&latin-small-letter-s-with-caron", "contents": "š"},
 
         // Latin capital letter y with diaeresis
         // &Yuml;  &#376;  &#x0178;
-        {"trigger": "&Latin capital letter y with diaeresis", "contents": "Ÿ"},
+        {"trigger": "&latin-capital-letter-y-with-diaeresis", "contents": "Ÿ"},
 
         // Latin small letter f with hook (function; florin)
         // &fnof;  &#402;  &#x0192;
-        {"trigger": "&Latin small letter f with hook (function; florin)", "contents": "ƒ"},
+        {"trigger": "&latin-small-letter-f-with-hook-function-florin", "contents": "ƒ"},
+        {"trigger": "&function", "contents": "ƒ"},
+        {"trigger": "&florin", "contents": "ƒ"},
 
         // modifier letter circumflex accent
         // &circ;  &#710;  &#x02C6;
@@ -464,212 +470,213 @@
 
         // Greek capital letter Alpha
         // &Alpha;  &#913;  &#x0391;
-        {"trigger": "&Greek capital letter Alpha", "contents": "Α"},
+        {"trigger": "&greek-capital-letter-alpha", "contents": "Α"},
 
         // Greek capital letter Beta
         // &Beta;  &#914;  &#x0392;
-        {"trigger": "&Greek capital letter Beta", "contents": "Β"},
+        {"trigger": "&greek-capital-letter-beta", "contents": "Β"},
 
         // Greek capital letter Gamma
         // &Gamma;  &#915;  &#x0393;
-        {"trigger": "&Greek capital letter Gamma", "contents": "Γ"},
+        {"trigger": "&greek-capital-letter-gamma", "contents": "Γ"},
 
         // Greek capital letter Delta
         // &Delta;  &#916;  &#x0394;
-        {"trigger": "&Greek capital letter Delta", "contents": "Δ"},
+        {"trigger": "&greek-capital-letter-delta", "contents": "Δ"},
 
         // Greek capital letter Epsilon
         // &Epsilon;  &#917;  &#x0395;
-        {"trigger": "&Greek capital letter Epsilon", "contents": "Ε"},
+        {"trigger": "&greek-capital-letter-epsilon", "contents": "Ε"},
 
         // Greek capital letter Zeta
         // &Zeta;  &#918;  &#x0396;
-        {"trigger": "&Greek capital letter Zeta", "contents": "Ζ"},
+        {"trigger": "&greek-capital-letter-zeta", "contents": "Ζ"},
 
         // Greek capital letter Eta
         // &Eta;  &#919;  &#x0397;
-        {"trigger": "&Greek capital letter Eta", "contents": "Η"},
+        {"trigger": "&greek-capital-letter-eta", "contents": "Η"},
 
         // Greek capital letter Theta
         // &Theta;  &#920;  &#x0398;
-        {"trigger": "&Greek capital letter Theta", "contents": "Θ"},
+        {"trigger": "&greek-capital-letter-theta", "contents": "Θ"},
 
         // Greek capital letter Iota
         // &Iota;  &#921;  &#x0399;
-        {"trigger": "&Greek capital letter Iota", "contents": "Ι"},
+        {"trigger": "&greek-capital-letter-iota", "contents": "Ι"},
 
         // Greek capital letter Kappa
         // &Kappa;  &#922;  &#x039A;
-        {"trigger": "&Greek capital letter Kappa", "contents": "Κ"},
+        {"trigger": "&greek-capital-letter-kappa", "contents": "Κ"},
 
         // Greek capital letter Lambda
         // &Lambda;  &#923;  &#x039B;
-        {"trigger": "&Greek capital letter Lambda", "contents": "Λ"},
+        {"trigger": "&greek-capital-letter-lambda", "contents": "Λ"},
 
         // Greek capital letter Mu
         // &Mu;  &#924;  &#x039C;
-        {"trigger": "&Greek capital letter Mu", "contents": "Μ"},
+        {"trigger": "&greek-capital-letter-mu", "contents": "Μ"},
 
         // Greek capital letter Nu
         // &Nu;  &#925;  &#x039D;
-        {"trigger": "&Greek capital letter Nu", "contents": "Ν"},
+        {"trigger": "&greek-capital-letter-nu", "contents": "Ν"},
 
         // Greek capital letter Xi
         // &Xi;  &#926;  &#x039E;
-        {"trigger": "&Greek capital letter Xi", "contents": "Ξ"},
+        {"trigger": "&greek-capital-letter-xi", "contents": "Ξ"},
 
         // Greek capital letter Omicron
         // &Omicron;  &#927;  &#x039F;
-        {"trigger": "&Greek capital letter Omicron", "contents": "Ο"},
+        {"trigger": "&greek-capital-letter-omicron", "contents": "Ο"},
 
         // Greek capital letter Pi
         // &Pi;  &#928;  &#x03A0;
-        {"trigger": "&Greek capital letter Pi", "contents": "Π"},
+        {"trigger": "&greek-capital-letter-pi", "contents": "Π"},
 
         // Greek capital letter Rho
         // &Rho;  &#929;  &#x03A1;
-        {"trigger": "&Greek capital letter Rho", "contents": "Ρ"},
+        {"trigger": "&greek-capital-letter-rho", "contents": "Ρ"},
 
         // Greek capital letter Sigma
         // &Sigma;  &#931;  &#x03A3;
-        {"trigger": "&Greek capital letter Sigma", "contents": "Σ"},
+        {"trigger": "&greek-capital-letter-sigma", "contents": "Σ"},
 
         // Greek capital letter Tau
         // &Tau;  &#932;  &#x03A4;
-        {"trigger": "&Greek capital letter Tau", "contents": "Τ"},
+        {"trigger": "&greek-capital-letter-tau", "contents": "Τ"},
 
         // Greek capital letter Upsilon
         // &Upsilon;  &#933;  &#x03A5;
-        {"trigger": "&Greek capital letter Upsilon", "contents": "Υ"},
+        {"trigger": "&greek-capital-letter-upsilon", "contents": "Υ"},
 
         // Greek capital letter Phi
         // &Phi;  &#934;  &#x03A6;
-        {"trigger": "&Greek capital letter Phi", "contents": "Φ"},
+        {"trigger": "&greek-capital-letter-phi", "contents": "Φ"},
 
 
         // Greek capital letter Chi
         // &Chi;  &#935;  &#x03A7;
-        {"trigger": "&Greek capital letter Chi", "contents": "Χ"},
+        {"trigger": "&greek-capital-letter-chi", "contents": "Χ"},
 
         // Greek capital letter Psi
         // &Psi;  &#936;  &#x03A8;
-        {"trigger": "&Greek capital letter Psi", "contents": "Ψ"},
+        {"trigger": "&greek-capital-letter-psi", "contents": "Ψ"},
 
         // Greek capital letter Omega
         // &Omega;  &#937;  &#x03A9;
-        {"trigger": "&Greek capital letter Omega", "contents": "Ω"},
+        {"trigger": "&greek-capital-letter-omega", "contents": "Ω"},
+        {"trigger": "&ohm-sign", "contents": "Ω"},
 
         // Greek small letter alpha
         // &alpha;  &#945;  &#x03B1;
-        {"trigger": "&Greek small letter alpha", "contents": "α"},
+        {"trigger": "&greek-small-letter-alpha", "contents": "α"},
 
         // Greek small letter beta
         // &beta;  &#946;  &#x03B2;
-        {"trigger": "&Greek small letter beta", "contents": "β"},
+        {"trigger": "&greek-small-letter-beta", "contents": "β"},
 
         // Greek small letter gamma
         // &gamma;  &#947;  &#x03B3;
-        {"trigger": "&Greek small letter gamma", "contents": "γ"},
+        {"trigger": "&greek-small-letter-gamma", "contents": "γ"},
 
         // Greek small letter delta
         // &delta;  &#948;  &#x03B4;
-        {"trigger": "&Greek small letter delta", "contents": "δ"},
+        {"trigger": "&greek-small-letter-delta", "contents": "δ"},
 
         // Greek small letter epsilon
         // &epsilon;  &#949;  &#x03B5;
-        {"trigger": "&Greek small letter epsilon", "contents": "ε"},
+        {"trigger": "&greek-small-letter-epsilon", "contents": "ε"},
 
         // Greek small letter zeta
         // &zeta;  &#950;  &#x03B6;
-        {"trigger": "&Greek small letter zeta", "contents": "ζ"},
+        {"trigger": "&greek-small-letter-zeta", "contents": "ζ"},
 
         // Greek small letter eta
         // &eta;  &#951;  &#x03B7;
-        {"trigger": "&Greek small letter eta", "contents": "η"},
+        {"trigger": "&greek-small-letter-eta", "contents": "η"},
 
         // Greek small letter theta
         // &theta;  &#952;  &#x03B8;
-        {"trigger": "&Greek small letter theta", "contents": "θ"},
+        {"trigger": "&greek-small-letter-theta", "contents": "θ"},
 
         // Greek small letter iota
         // &iota;  &#953;  &#x03B9;
-        {"trigger": "&Greek small letter iota", "contents": "ι"},
+        {"trigger": "&greek-small-letter-iota", "contents": "ι"},
 
         // Greek small letter kappa
         // &kappa;  &#954;  &#x03BA;
-        {"trigger": "&Greek small letter kappa", "contents": "κ"},
+        {"trigger": "&greek-small-letter-kappa", "contents": "κ"},
 
         // Greek small letter lambda
         // &lambda;  &#955;  &#x03BB;
-        {"trigger": "&Greek small letter lambda", "contents": "λ"},
+        {"trigger": "&greek-small-letter-lambda", "contents": "λ"},
 
         // Greek small letter mu
         // &mu;  &#956;  &#x03BC;
-        {"trigger": "&Greek small letter mu", "contents": "μ"},
+        {"trigger": "&greek-small-letter-mu", "contents": "μ"},
 
         // Greek small letter nu
         // &nu;  &#957;  &#x03BD;
-        {"trigger": "&Greek small letter nu", "contents": "ν"},
+        {"trigger": "&greek-small-letter-nu", "contents": "ν"},
 
         // Greek small letter xi
         // &xi;  &#958;  &#x03BE;
-        {"trigger": "&Greek small letter xi", "contents": "ξ"},
+        {"trigger": "&greek-small-letter-xi", "contents": "ξ"},
 
         // Greek small letter omicron
         // &omicron;  &#959;  &#x03BF;
-        {"trigger": "&Greek small letter omicron", "contents": "ο"},
+        {"trigger": "&greek-small-letter-omicron", "contents": "ο"},
 
         // Greek small letter pi
         // &pi;  &#960;  &#x03C0;
-        {"trigger": "&Greek small letter pi", "contents": "π"},
+        {"trigger": "&greek-small-letter-pi", "contents": "π"},
 
         // Greek small letter rho
         // &rho;  &#961;  &#x03C1;
-        {"trigger": "&Greek small letter rho", "contents": "ρ"},
+        {"trigger": "&greek-small-letter-rho", "contents": "ρ"},
 
         // Greek small letter final sigma
         // &sigmaf;  &#962;  &#x03C2;
-        {"trigger": "&Greek small letter final sigma", "contents": "ς"},
+        {"trigger": "&greek-small-letter-final-sigma", "contents": "ς"},
 
         // Greek small letter sigma
         // &sigma;  &#963;  &#x03C3;
-        {"trigger": "&Greek small letter sigma", "contents": "σ"},
+        {"trigger": "&greek-small-letter-sigma", "contents": "σ"},
 
         // Greek small letter tau
         // &tau;  &#964;  &#x03C4;
-        {"trigger": "&Greek small letter tau", "contents": "τ"},
+        {"trigger": "&greek-small-letter-tau", "contents": "τ"},
 
         // Greek small letter upsilon
         // &upsilon;  &#965;  &#x03C5;
-        {"trigger": "&Greek small letter upsilon", "contents": "υ"},
+        {"trigger": "&greek-small-letter-upsilon", "contents": "υ"},
 
         // Greek small letter phi
         // &phi;  &#966;  &#x03C6;
-        {"trigger": "&Greek small letter phi", "contents": "φ"},
+        {"trigger": "&greek-small-letter-phi", "contents": "φ"},
 
         // Greek small letter chi
         // &chi;  &#967;  &#x03C7;
-        {"trigger": "&Greek small letter chi", "contents": "χ"},
+        {"trigger": "&greek-small-letter-chi", "contents": "χ"},
 
         // Greek small letter psi
         // &psi;  &#968;  &#x03C8;
-        {"trigger": "&greek small letter psi", "contents": "ψ"},
+        {"trigger": "&greek-small-letter-psi", "contents": "ψ"},
 
         // Greek small letter omega
         // &omega;  &#969;  &#x03C9;
-        {"trigger": "&greek small letter omega", "contents": "ω"},
+        {"trigger": "&greek-small-letter-omega", "contents": "ω"},
 
         // Greek theta symbol
         // &thetasym;  &#977;  &#x03D1;
-        {"trigger": "&greek theta symbol", "contents": "ϑ"},
+        {"trigger": "&greek-theta-symbol", "contents": "ϑ"},
 
         // Greek Upsilon with hook symbol
         // &upsih;  &#978;  &#x03D2;
-        {"trigger": "&greek upsilon with hook symbol", "contents": "ϒ"},
+        {"trigger": "&greek-upsilon-with-hook-symbol", "contents": "ϒ"},
 
         // Greek pi symbol
         // &piv;  &#982;  &#x03D6;
-        {"trigger": "&greek pi symbol", "contents": "ϖ"},
+        {"trigger": "&greek-pi-symbol", "contents": "ϖ"},
 
         // en space
         // &ensp;  &#8194;  &#x2002;
@@ -720,6 +727,7 @@
         {"trigger": "&right-single-quotation-mark", "contents": "’"},
         {"trigger": "&closing-single-quotation-mark", "contents": "’"},
         {"trigger": "&single-comma-quotation-mark", "contents": "’"},
+        {"trigger": "&apostrophe", "contents": "’"},
 
         // single low-9 quotation mark
         // &sbquo;  &#8218;  &#x201A;
@@ -762,13 +770,12 @@
 
         // horizontal ellipsis (three dot leader)
         // &hellip;  &#8230;  &#x2026;
-        {"trigger": "&horizontal-ellipsis (three dot leader)", "contents": "…"},
+        {"trigger": "&horizontal-ellipsis", "contents": "…"},
         {"trigger": "&three-dot-leader", "contents": "…"},
 
         // per mille sign
         // &permil;  &#8240;  &#x2030;
         {"trigger": "&per-mille-sign", "contents": "‰"},
-        {"trigger": "&permille", "contents": "‰"},
         {"trigger": "&per-thousand", "contents": "‰"},
 
         // prime (minutes; feet)
@@ -800,7 +807,8 @@
 
         // fraction slash (solidus)
         // &frasl;  &#8260;  &#x2044;
-        {"trigger": "&fraction slash (solidus)", "contents": "⁄"},
+        {"trigger": "&fraction-slash", "contents": "⁄"},
+        {"trigger": "&solidus-in-typography", "contents": "⁄"},
 
         // euro sign
         // &euro;  &#8364;  &#x20AC;
@@ -808,23 +816,28 @@
 
         // black-letter capital I (imaginary part)
         // &image;  &#8465;  &#x2111;
-        {"trigger": "&black-letter capital I (imaginary part)", "contents": "ℑ"},
+        {"trigger": "&black-letter-capital-i", "contents": "ℑ"},
+        {"trigger": "&imaginary-part", "contents": "ℑ"},
 
         // script capital P (power set; Weierstrass p)
         // &weierp;  &#8472;  &#x2118;
-        {"trigger": "&script capital P (power set; Weierstrass p)", "contents": "℘"},
+        {"trigger": "&script-capital-p", "contents": "℘"},
+        {"trigger": "&power-set", "contents": "℘"},
+        {"trigger": "&weierstrass-p-elliptic-function", "contents": "℘"},
 
         // black-letter capital R (real part symbol)
         // &real;  &#8476;  &#x211C;
-        {"trigger": "&black-letter capital R (real part symbol)", "contents": "ℜ"},
+        {"trigger": "&black-letter-capital-r", "contents": "ℜ"},
+        {"trigger": "&real-part", "contents": "ℜ"},
 
         // trademark sign
         // &trade;  &#8482;  &#x2122;
-        {"trigger": "&trademark sign", "contents": "™"},
+        {"trigger": "&trademark-sign", "contents": "™"},
 
         // alef symbol (first transfinite cardinal)
         // &alefsym;  &#8501;  &#x2135;
-        {"trigger": "&alef symbol (first transfinite cardinal)", "contents": "ℵ"},
+        {"trigger": "&alef-symbol", "contents": "ℵ"},
+        {"trigger": "&first-transfinite-cardinal-countable", "contents": "ℵ"},
 
         // leftwards arrow
         // &larr;  &#8592;  &#x2190;
@@ -849,6 +862,7 @@
         // downwards arrow with corner leftwards (carriage return)
         // &crarr;  &#8629;  &#x21B5;
         {"trigger": "&downwards-arrow-with-corner-leftwards", "contents": "↵"},
+        {"trigger": "&carriage-return", "contents": "↵"},
 
         // leftwards double arrow
         // &lArr;  &#8656;  &#x21D0;
@@ -989,7 +1003,7 @@
         // congruent to
         // &cong;  &#8773;  &#x2245;
         {"trigger": "&aproximately-equal-to", "contents": "≅"},
-        {"trigger": "&congruent to", "contents": "≅"},
+        {"trigger": "&congruent-to", "contents": "≅"},
 
         // almost equal to (asymptotic to)
         // &asymp;  &#8776;  &#x2248;
