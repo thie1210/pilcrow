@@ -4,7 +4,7 @@
     "completions": [
         // non-breaking hyphen
         // &#8209; &#x2011;
-        { "trigger": "&non-breaking-hyphen", "contents": "\\2011"},
+        { "trigger": "&non-breaking-hyphen", "contents": "\\002011"},
 
         // quotation mark (APL quote)
         // &quot;  &#34;  &#x0022;
@@ -29,54 +29,54 @@
 
         // no-break space (non-breaking space)
         // &nbsp;  &#160;  &#x00A0;
-        {"trigger": "&no-break-space", "contents": "\\00A0"},
+        {"trigger": "&no-break-space", "contents": "\\0000A0"},
 
         // soft hyphen (discretionary hyphen)
         // &shy;   &#173;  &#x00AD;
-        {"trigger": "&soft-hyphen", "contents": "\\00AD"},
-        {"trigger": "&discretionary-hyphen", "contents": "\\00AD"},
-        {"trigger": "&optional-hyphen", "contents": "\\00AD" },
+        {"trigger": "&soft-hyphen", "contents": "\\0000AD"},
+        {"trigger": "&discretionary-hyphen", "contents": "\\0000AD"},
+        {"trigger": "&optional-hyphen", "contents": "\\0000AD" },
         
         // en space
         // &ensp;  &#8194;  &#x2002;
-        {"trigger": "&en-space", "contents": "\\2002"},
-        {"trigger": "&nut", "contents": "\\2002"},
+        {"trigger": "&en-space", "contents": "\\002002"},
+        {"trigger": "&nut", "contents": "\\002002"},
 
         // em space
         // &emsp;  &#8195;  &#x2003;
-        {"trigger": "&em-space", "contents": "\\2003"},
-        {"trigger": "&mutton", "contents": "\\2003"},
+        {"trigger": "&em-space", "contents": "\\002003"},
+        {"trigger": "&mutton", "contents": "\\002003"},
 
         // thin space
         // &thinsp;  &#8201;  &#x2009;
-        {"trigger": "&thin-space", "contents": "\\2009"},
+        {"trigger": "&thin-space", "contents": "\\002009"},
 
         // zero-width non-joiner
         // &zwnj;  &#8204;  &#x200C;
-        {"trigger": "&zero-width-non-joiner", "contents": "\\200C‌"},
+        {"trigger": "&zero-width-non-joiner", "contents": "\\00200C‌"},
 
         // zero-width joiner
         // &zwj;  &#8205;  &#x200D;
-        {"trigger": "&zero-width-joiner", "contents": "‍\\200D"},
+        {"trigger": "&zero-width-joiner", "contents": "‍\\00200D"},
 
         // left-to-right mark
         // &lrm;  &#8206;  &#x200E;
-        {"trigger": "&left-to-right-mark", "contents": "‎\\200E"},
+        {"trigger": "&left-to-right-mark", "contents": "‎\\00200E"},
 
         // right-to-left mark
         // &rlm;  &#8207;  &#x200F;
-        {"trigger": "&right-to-left-mark", "contents": "‏\\200F"},
+        {"trigger": "&right-to-left-mark", "contents": "‏\\00200F"},
 
         // en dash
         // &ndash;  &#8211;  &#x2013;
-        {"trigger": "&en-dash", "contents": "\\2013"},
+        {"trigger": "&en-dash", "contents": "\\002013"},
 
         // em dash
         // &mdash;  &#8212;  &#x2014;
-        {"trigger": "&em-dash", "contents": "\\2014"},
+        {"trigger": "&em-dash", "contents": "\\002014"},
 
         // minus sign
         // &minus;  &#8722;  &#x2212;
-        {"trigger": "&minus-sign", "contents": "\\2212"}
+        {"trigger": "&minus-sign", "contents": "\\002212"}
     ]
 }
