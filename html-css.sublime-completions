@@ -1,5 +1,5 @@
 {
-    "scope": "text.html, source.css",
+    "scope": "text.html, source.css, source.sass",
 
     "completions": [
         // non-breaking hyphen
